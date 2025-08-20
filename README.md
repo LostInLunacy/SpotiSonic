@@ -1,0 +1,1 @@
+An app geared towards music discovery through Spotify track previews.

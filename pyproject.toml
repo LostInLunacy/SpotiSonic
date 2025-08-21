@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spotisonic"
+version = "0.1.0"
+description = "Accelerated Music Discovery CLI"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "LostInLunacy", email = "callum.heavens96@gmail.com"}
+]
+keywords = ["spotify", "music", "discovery", "cli"]
+
+dependencies = [
+    "click>=8.0.0",
+]
+
+[project.optional-dependencies]
+# allows grouping of depdencies not required for basic functionality
+dev = []
+
+[project.scripts]
+# spotisonic (left side): The command name users type in their terminal.
+# spotisonic.cli (right side): The Python file path (spotisonic/cli.py).
+# :cli (after the colon): The specific function in that file to run.
+spotisonic = "spotisonic.cli:cli"
+
+[tool.setuptools.packages]
+# equivalent of packages = find_packages()
+find = {}
